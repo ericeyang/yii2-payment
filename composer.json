@@ -15,6 +15,12 @@
             "email": "ericeyany@gmail.com"
         }
     ],
+    "repositories": [
+        {
+            "type": "git",
+            "url": "git://github.com/ericeyang/yii2-payment.git"
+        }
+    ],
     "minimum-stability": "dev",
     "require": {
         "yiisoft/yii2": "*"
