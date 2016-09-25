@@ -1,2 +1,2 @@
 # yii2-payment
-在yii2下集成支付宝、微信支付
+Alipay and WeChat payment for yii2
