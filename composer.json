@@ -1,0 +1,14 @@
+{
+    "name": "ericeyang/yii2-payment",
+    "description": "Alipay and WeChat payment for yii2",
+    "type": "yii2-extension",
+    "license": "BSD-3-Clause",
+    "authors": [
+        {
+            "name": "Erice Yang",
+            "email": "ericeyany@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {}
+}
