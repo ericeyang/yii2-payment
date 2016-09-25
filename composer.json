@@ -16,5 +16,7 @@
         }
     ],
     "minimum-stability": "dev",
-    "require": {}
+    "require": {
+        "yiisoft/yii2": "*"
+    }
 }
