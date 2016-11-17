@@ -77,7 +77,7 @@ class AlipayClient extends Payment implements AlipayInterface, AlipayNotifyInter
 
         // 转换为openssl格式密钥
         $res = openssl_get_publickey($pubKey);
-        ($res) or die('支付宝RSA公钥错误。请检查公钥文件格式是否正确');
+        ($res) or die('支付宝RSA公钥错误。请检查公钥文件格式是否正确'); // Warn：支付宝公钥必须换行，否则报错
 
         // 调用openssl内置方法验签，返回bool值
         if ("RSA2" == $signType) {
@@ -92,6 +92,15 @@ class AlipayClient extends Payment implements AlipayInterface, AlipayNotifyInter
         return $result;
     }
 
+	/**
+	 * 验证客户端同步返回支付结果信息
+	 *
+	 * @param $signSource
+	 * @param $sign
+	 * @param $signType
+	 *
+	 * @return bool
+	 */
     public function verifyClientNotify($signSource, $sign, $signType)
     {
         $signContent = $this->buildSignContent($signSource);
